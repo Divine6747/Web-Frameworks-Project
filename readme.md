@@ -36,7 +36,7 @@ To get the code for a specific branch:
 
 Then change into the folder the git clone command will create:
 
-`$ cd getting-MEAN-2`
+`$ cd DessertDelight`
 
 And finally install the dependencies:
 
