@@ -11,8 +11,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
 }
 
-.navbar {
-  background-color: #fd98ce;
+.navbar{
+  background-color: #f7a7d2;
   border-color: #911821;
 }
 
@@ -62,6 +62,7 @@ h1 small {
 h4 a,
 h4 a:hover {
   color: #fff;
+  text-decoration: dashed;
 }
 
 h4 small {
@@ -85,7 +86,7 @@ legend {
 .navbar-nav {
   display: flex;
   justify-content: flex-start;
-  padding-left: 110px;/* Adjust padding to align items properly */
+  padding-left: 180px;/* Adjusts the padding for the links to the left */
 }
 
 .navbar-nav .nav-item {
@@ -99,11 +100,138 @@ legend {
   align-items: center;
 }
 .navbar-brand img{
-  max-height: 110px;
+  max-height: 115px;
   width: auto;
   display: block;
 }
 .navbar-nav .nav-item .nav-link i{
   margin-left: 18px;
   vertical-align: middle;
+}
+.icon-home{
+  color: #a600ff;
+}
+.icon-login{
+  color:#005e5e;
+}
+.icon-register{
+  color:#fd432e;
+}
+.icon-about{
+  color:#8c1a1a;
+}
+
+/**Login Page CSS**/
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/login_bg.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: "Cabin", Arial, sans-serif;
+}
+
+.login-card {
+  width: 650px;
+  max-width: 90%;
+  background-color: rgba(0,0,0,0.7) !important;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.login-card-header h3.login-title {
+  font-size: 28px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.login-input-group {
+  margin-bottom: 15px;
+}
+
+.login-btn {
+  color: black;
+  background-color: #c55f6e;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.login-links {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-links a {
+  margin-left: 4px;
+}
+/*Registration Page*/
+.register-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/login_bg.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: "Cabin", Arial, sans-serif;
+}
+
+.register-card {
+  width: 650px;
+  max-width: 90%;
+  background-color: rgba(0,0,0,0.7) !important;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.register-card-header h3.register-title {
+  font-size: 28px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.register-input-group {
+  margin-bottom: 15px;
+}
+
+.register-btn {
+  color: black;
+  background-color: #c55f6e;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.register-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.register-links {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-links a {
+  margin-left: 4px;
 }

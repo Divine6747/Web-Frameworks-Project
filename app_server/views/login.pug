@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Login Page
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+
+  body.login-page
+    .login-card.card
+      .login-card-header.card-header
+        h3.login-title Login In
+
+      .login-card-body.card-body
+        form.login-form
+          .login-input-group.input-group
+            .login-input-prepend.input-group-prepend
+              span.login-input-text.input-group-text
+                i.fas.fa-user
+            input.login-input.form-control(type='text', placeholder='Username')
+
+          .login-input-group.input-group
+            .login-input-prepend.input-group-prepend
+              span.login-input-text.input-group-text
+                i.fas.fa-key
+            input.login-input.form-control(type='password', placeholder='Password')
+
+          input.login-btn.btn(type='submit', value='Login')
+
+      .login-card-footer.card-footer
+        .login-links
+          | Don’t have an account?
+          a.login-signup-link(href='/register') Sign Up
