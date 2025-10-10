@@ -109,16 +109,16 @@ legend {
   vertical-align: middle;
 }
 .icon-home{
-  color: #a600ff;
+  color: #914dff;
 }
 .icon-login{
-  color:#005e5e;
+  color:#157878;
 }
 .icon-register{
-  color:#fd432e;
+  color:#ed6464;
 }
 .icon-about{
-  color:#8c1a1a;
+  color:#ff0000;
 }
 
 /**Login Page CSS**/
@@ -235,3 +235,6 @@ legend {
 .register-links a {
   margin-left: 4px;
 }
+
+
+/**Stars CSS**/
