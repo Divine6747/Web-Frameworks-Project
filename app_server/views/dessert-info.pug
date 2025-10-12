@@ -1,0 +1,28 @@
+extends layout
+include _includes/sharedHTMLfunctions.pug
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+  .row
+    .col-12.col-md-8
+      .card
+        .card-block
+          img.dessert-image(src=dessert.image, alt=pageHeader.title)
+
+          h2 Ingredients
+          ul
+            each item in dessert.ingredients
+              li
+                strong= item.name + ':'
+                |  #{item.description}
+
+          h2 Preparation Steps
+          ol
+            each step in dessert.steps
+              li= step
+
+    .col-12.col-md-4
+      p.lead Simply Perfect Vanilla Cupcakes are light, moist, and full of rich vanilla flavor.
+      p.lead Decorate with vanilla buttercream and a few sprinkles for a classic treat.
