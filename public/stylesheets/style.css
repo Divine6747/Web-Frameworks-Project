@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .banner {
   margin-top: 4em;
-  border-bottom: 1px solid #469ea8;
+  border-bottom: 1px solid #F5C518;
   margin-bottom: 1.5em;
   padding-bottom: 0.5em;
 }
@@ -33,13 +33,18 @@ h1 small {
 
 .card {
   background-color: #469ea8;
+  border-radius: 30px;
+  padding: 20px;
 }
 
 .card-primary {
   border-color: #a2ced3;
   margin-bottom: 1rem;
 }
-
+.card-block{
+  display: flex;
+  flex-direction: column;
+}
 .review-header {
   background-color: #31727a;
   padding-top: 0.5em;
@@ -237,4 +242,53 @@ legend {
 }
 
 
+/*Dessert Page*/
+.fa-star,
+.fa-star-o {
+  color: #f5c518; /* gold */
+  font-size: 1rem;
+  margin-right: 2px;
+}
 
+.fa-star-o {
+  color: #ddd;
+}
+
+.card {
+  background-color: #469ea8;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.card-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dessert-image {
+  display: block;
+  margin: 0 auto 20px auto; 
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Reviews and Rating Section */
+.rating-section {
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.rating-section h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: 'Cabin', Arial, sans-serif;
+}
+
+h3.review-text {
+  font-family: 'Lobster', cursive;
+  color: #F5C518;
+  margin-bottom: 10px;
+}

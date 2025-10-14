@@ -6,6 +6,9 @@ const dessertList = function (req, res){
     },
     dessert: {
       image: '/images/vanilla_cupcake.jpg',
+      rating: 4,
+      ratingText: '4 out of 5',
+      reviewCount: 128,
       ingredients: [
         { name: 'Cake flour', description: '1 and 3/4 cups (207g), spooned & leveled' },
         { name: 'Baking powder', description: '3/4 teaspoon' },

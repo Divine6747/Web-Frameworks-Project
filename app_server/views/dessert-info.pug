@@ -3,14 +3,20 @@ include _includes/sharedHTMLfunctions.pug
 
 block content
   .row.banner
-    .col-12
+    .col-12.dessert-header
       h1= pageHeader.title
+      h3.review-text Reviews
+      .div.rating-section
+        h4 Rating: #{dessert.ratingText} (#{dessert.reviewCount} reviews)
+        +outputRating(dessert.rating)
+
+
   .row
     .col-12.col-md-8
       .card
         .card-block
           img.dessert-image(src=dessert.image, alt=pageHeader.title)
-
+          br
           h2 Ingredients
           ul
             each item in dessert.ingredients
