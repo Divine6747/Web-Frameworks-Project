@@ -5,30 +5,32 @@ block content
   .row.banner
     .col-12.dessert-header
       h1= pageHeader.title
-      h3.review-text Reviews
-      .div.rating-section
-        h4 Rating: #{dessert.ratingText} (#{dessert.reviewCount} reviews)
-        +outputRating(dessert.rating)
 
+  each dessert in desserts
+    .row
+      .col-12.col-md-8
+        .card
+          .card-block
+            h2= dessert.name
+            img.dessert-image(src=dessert.image, alt=dessert.name)
 
-  .row
-    .col-12.col-md-8
-      .card
-        .card-block
-          img.dessert-image(src=dessert.image, alt=pageHeader.title)
-          br
-          h2 Ingredients
-          ul
-            each item in dessert.ingredients
-              li
-                strong= item.name + ':'
-                |  #{item.description}
+            .rating-section
+              h4 
+                strong Rating: #{dessert.ratingText} (#{dessert.reviewCount} reviews)
+              div 
+                +outputRating(dessert.rating)
+            h3 Ingredients
+            ul
+              each item in dessert.ingredients
+                li
+                  strong= item.name + ':'
+                  |  #{item.description}
 
-          h2 Preparation Steps
-          ol
-            each step in dessert.steps
-              li= step
+            h3 Preparation Steps
+            ol
+              each step in dessert.steps
+                li= step
 
-    .col-12.col-md-4
-      p.lead Simply Perfect Vanilla Cupcakes are light, moist, and full of rich vanilla flavor.
-      p.lead Decorate with vanilla buttercream and a few sprinkles for a classic treat.
+      .col-12.col-md-4
+        h2 Description
+        p.lead= dessert.description
