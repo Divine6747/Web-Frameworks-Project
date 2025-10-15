@@ -23,10 +23,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .banner{
   margin-top: 5em;
-  border-bottom: 5px solid #e4cfef;
-  border-radius: 5px;
+}
+.col-12.dessert-header hr{
+  background-color: #e4cfef;
+  border-radius: 10px;
   margin-bottom: 1.5em;
-  padding-bottom: 0.5em;
+  height: 0.2em;
 }
 
 h1 small {
