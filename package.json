@@ -1,5 +1,5 @@
 {
-  "name": "loc8r",
+  "name": "dessert-delight",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,10 @@
     "cookie-parser": "~1.4.3",
     "debug": "^2.6.9",
     "express": "^4.21.2",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.19.2",
     "morgan": "^1.10.1",
+    "nodemon": "^3.1.10",
     "pug": "^3.0.3",
     "serve-favicon": "^2.5.1"
   }
