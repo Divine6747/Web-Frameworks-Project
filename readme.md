@@ -32,12 +32,18 @@ Pre-requisites:
 
 To get the code for a specific branch:
 
-`$ git clone -b branch-name https://github.com/simonholmes/getting-MEAN-2.git`
+'$ git clone https://github.com/Divine6747/Web-Frameworks-Project.git'
 
 Then change into the folder the git clone command will create:
 
-`$ cd DessertDelight`
+`$ cd Web-Frameworks-Project`
 
 And finally install the dependencies:
 
 `npm install`
+
+'npm install nodemon'
+
+'npm install --save mongodb@latest'
+
+'npm install --save mongoose@latest'
