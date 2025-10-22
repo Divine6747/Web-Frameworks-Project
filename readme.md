@@ -42,8 +42,8 @@ And finally install the dependencies:
 
 `npm install`
 
-'npm install nodemon'
+`npm install nodemon`
 
-'npm install --save mongodb@latest'
+`npm install --save mongodb@latest`
 
-'npm install --save mongoose@latest'
+`npm install --save mongoose@latest`
