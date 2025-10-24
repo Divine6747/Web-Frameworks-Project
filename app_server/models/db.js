@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const dbURI = 'mongodb+srv://<USERNAME>:<PASSWORD>@cluster0.fkrib2b.mongodb.net/DessertDelight?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://Divine:1234@cluster0.fkrib2b.mongodb.net/DessertDelight?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI)
   .then(() => console.log('MongoDB connected'))
