@@ -79,6 +79,37 @@ h1 small {
 .icon-about {
   color: #ff0000;
 }
+
+/* When Screen is at any Medium screens <=1200px */
+@media (max-width: 1200px) {
+  .navbar-nav {
+    padding-left: 100px;
+  }
+  .navbar-nav .nav-item {
+    margin-right: 20px;
+  }
+}
+
+/* When Screen is at any Small screens <=992px */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    padding-left: 0;
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* When Screen is at any small screens <=576px */
+@media (max-width: 576px) {
+  .navbar-nav {
+    font-size: 0.9rem;
+  }
+}
+
 /*End of Layout Page*/
 
 /* Dessert Page Cards */
