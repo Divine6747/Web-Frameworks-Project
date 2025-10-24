@@ -2,10 +2,6 @@ extends layout
 include _includes/sharedHTMLfunctions.pug
 
 block content
-  .row.banner
-    .col-12.dessert-header
-      h1= pageHeader.title
-      hr
   each dessert in desserts
     .row
       .col-12.col-md-8
@@ -19,6 +15,7 @@ block content
                 strong Rating: #{dessert.ratingText} (#{dessert.reviewCount} reviews)
               div 
                 +outputRating(dessert.rating)
+
             h3 Ingredients
             ul
               each item in dessert.ingredients

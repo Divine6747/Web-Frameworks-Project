@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ctrlOthers = require('../controllers/others');
+const ctrlAbout= require('../controllers/about');
 const ctrlAuth = require('../controllers/auth');
 const ctrlDest = require('../controllers/dessert');
 
@@ -8,7 +8,7 @@ const ctrlDest = require('../controllers/dessert');
 router.get('/', ctrlDest.dessertList);
 
 /* Other pages */
-router.get('/about', ctrlOthers.about);
+router.get('/about', ctrlAbout.aboutPage);
 router.get('/login', ctrlAuth.login);
 router.get('/register', ctrlAuth.register);
 router.get('/dessert-info', ctrlDest.dessertList);

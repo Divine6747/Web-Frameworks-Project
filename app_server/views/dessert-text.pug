@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  each item in about
+    .row.banner
+      .col-12
+        h1= item.welcomeText
+    .row
+      .col-12.col-lg-8
+        h2= item.title
+        p.lead= item.intro
+        p= item.mission
+        p= item.story
+        p
+          strong Motto:
+          |  #{item.motto}
