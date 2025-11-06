@@ -27,14 +27,14 @@ There will be named branches for the various states of the code throughout the b
 Pre-requisites:
 
 * Git installed
-* A command line interface capable of running Git commands
+* A command-line interface capable of running Git commands
 * Node v6 installed (don't use 7 as it is unstable)
 
-To get the code for a specific branch:
+To get the project:
 
 '$ git clone https://github.com/Divine6747/Web-Frameworks-Project.git'
 
-Then change into the folder the git clone command will create:
+Cd into the Web-Frameworks-Project folder:
 
 `$ cd Web-Frameworks-Project`
 
