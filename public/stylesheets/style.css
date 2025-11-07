@@ -1,17 +1,21 @@
 @import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
 
+/* Base Styles */
 body {
   font-family: "Cabin", Arial, sans-serif;
   color: #ffffff;
   background-color: #108a93;
   padding-top: 120px;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
   color: #ffffff;
+  margin: 0.5em 0;
 }
 
+/* Navbar */
 .navbar {
   background-color: #f7a7d2;
   border-color: #911821;
@@ -21,21 +25,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
 }
 
-.banner{
-  margin-top: 5em;
-}
-.col-12.dessert-header hr{
-  background-color: #e4cfef;
-  border-radius: 10px;
-  margin-bottom: 1.5em;
-  height: 0.2em;
+.navbar-brand img {
+  max-height: 115px;
+  width: auto;
+  display: block;
 }
 
-h1 small {
-  color: #aaa;
-}
-
-/*Layout Page*/
 .navbar-nav {
   display: flex;
   justify-content: flex-start;
@@ -48,49 +43,45 @@ h1 small {
 
 .navbar-nav .nav-item .nav-link {
   color: #7D2500;
-  padding-right: 100px;
   display: flex;
   align-items: center;
-}
-
-.navbar-brand img {
-  max-height: 115px;
-  width: auto;
-  display: block;
+  padding-right: 100px;
 }
 
 .navbar-nav .nav-item .nav-link i {
   margin-left: 18px;
   vertical-align: middle;
 }
-/* Icon colors */
-.icon-home {
-  color: #914dff;
+
+/* Icon Colors */
+.icon-home { color: #914dff; }
+.icon-login { color: #157878; }
+.icon-register { color: #ed6464; }
+.icon-about { color: #ff0000; }
+
+/* Banner */
+.banner {
+  margin-top: 5em;
 }
 
-.icon-login {
-  color: #157878;
+/* Dessert Header */
+.col-12.dessert-header hr {
+  background-color: #e4cfef;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  height: 0.2em;
 }
 
-.icon-register {
-  color: #ed6464;
+h1 small {
+  color: #aaa;
 }
 
-.icon-about {
-  color: #ff0000;
-}
-
-/* When Screen is at any Medium screens <=1200px */
+/* Responsive Navbar Adjustments */
 @media (max-width: 1200px) {
-  .navbar-nav {
-    padding-left: 100px;
-  }
-  .navbar-nav .nav-item {
-    margin-right: 20px;
-  }
+  .navbar-nav { padding-left: 100px; }
+  .navbar-nav .nav-item { margin-right: 20px; }
 }
 
-/* When Screen is at any Small screens <=992px */
 @media (max-width: 992px) {
   .navbar-nav {
     flex-direction: column;
@@ -103,16 +94,11 @@ h1 small {
   }
 }
 
-/* When Screen is at any small screens <=576px */
 @media (max-width: 576px) {
-  .navbar-nav {
-    font-size: 0.9rem;
-  }
+  .navbar-nav { font-size: 0.9rem; }
 }
 
-/*End of Layout Page*/
-
-/* Dessert Page Cards */
+/* Dessert Cards */
 .card {
   background-color: #469ea8;
   border-radius: 30px;
@@ -124,9 +110,11 @@ h1 small {
   flex-direction: column;
   align-items: flex-start;
 }
-.card h2{
+
+.card h2 {
   text-align: center;
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .dessert-image {
@@ -142,8 +130,7 @@ h1 small {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
   line-height: 1.5;
 }
 
@@ -153,37 +140,57 @@ h1 small {
   color: #fff;
   font-family: 'Cabin', Arial, sans-serif;
 }
-.col-12.col-md-4 h2{
-  padding-top: 100px;
+
+/* Ingredients & Steps */
+.row {
+  margin-top: 70px;
 }
 
-/* Star colors */
-.fa-star,
-.fa-star-o {
-  color: #f5c518;
-  font-size: 1rem;
-}
-
-.fa-star-o {
-  color: #ddd;
-}
-
-/* Ingredients and theoir Steps */
 .card ul,
 .card ol {
   margin-left: 20px;
   color: #fff;
 }
 
-.card h2 {
-  margin-bottom: 25px;
+.col-12.col-md-8 {
+  padding-bottom: 60px;
 }
-.col-12.col-md-8{
-padding-bottom: 60px;
-}
-/*End of Dessert Page*/
 
-/* Login & Registration Pages */
+/* Description Column */
+.col-12.col-md-4 h2 {
+  padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  .col-12.col-md-4 h2 {
+    padding-top: 2px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .col-12.col-md-4 p {
+    font-size: 22px;
+  }
+  .col-12.col-md-4 p.lead {
+    margin-top: 5px;
+  }
+  .row {
+    margin-top: 40px;
+  }
+}
+
+/* Star Ratings */
+.fa-star, .fa-star-o {
+  font-size: 1rem;
+}
+
+.fa-star { 
+  color: #f5c518; 
+}
+.fa-star-o { 
+  color: #ddd; 
+}
+
+/* Login & Registration */
 .login-page, .register-page {
   height: 100vh;
   display: flex;
@@ -191,7 +198,6 @@ padding-bottom: 60px;
   align-items: center;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/login_bg.jpg') no-repeat center center;
   background-size: cover;
-  font-family: "Cabin", Arial, sans-serif;
 }
 
 .login-card, .register-card {

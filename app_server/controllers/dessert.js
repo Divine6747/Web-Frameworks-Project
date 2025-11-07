@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Dessert = mongoose.model('Desserts');
+const Dessert = mongoose.model('Dessert');
 
 const dessertList = function (req, res) {
   Dessert.find()

@@ -27,4 +27,4 @@ const dessertSchema = new mongoose.Schema({
   reviews: [reviewSchema]
 });
 
-mongoose.model('Desserts', dessertSchema);
+mongoose.model('Dessert', dessertSchema);
