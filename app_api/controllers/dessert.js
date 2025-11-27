@@ -27,7 +27,7 @@ const dessertReadOne = (req, res) => {
     });
 };
 
-module.exports = { 
-  dessertList, 
-  dessertReadOne 
+module.exports = {
+  dessertList,
+  dessertReadOne
 };

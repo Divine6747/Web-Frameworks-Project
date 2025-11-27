@@ -9,5 +9,6 @@ mongoose.connect(dbURI)
 
 require('./dessert');
 require('./about');
+require('./user');
 
 module.exports = mongoose;

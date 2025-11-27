@@ -13,43 +13,43 @@ html
         h3.register-title Register
 
       .register-card-body.card-body
-        form.register-form
+        form.register-form(method='POST', action='/api/auth/register')
 
           .register-input-group.input-group
               .register-input-prepend.input-group-prepend
                 span.register-input-text.input-group-text
                   i.fas.fa-id-card
-              input.register-input.form-control(type='text', placeholder='First Name')
+              input.register-input.form-control(type='text', placeholder='First Name', name='firstName')
 
           .register-input-group.input-group
               .register-input-prepend.input-group-prepend
                 span.register-input-text.input-group-text
                   i.fas.fa-id-card
-              input.register-input.form-control(type='text', placeholder='Last Name')
+              input.register-input.form-control(type='text', placeholder='Last Name', name='lastName')
 
           .register-input-group.input-group
             .register-input-prepend.input-group-prepend
               span.register-input-text.input-group-text
                 i.fas.fa-user
-            input.register-input.form-control(type='text', placeholder='Username')
+            input.register-input.form-control(type='text', placeholder='Username', name='username')
 
           .register-input-group.input-group
             .register-input-prepend.input-group-prepend
               span.register-input-text.input-group-text
                 i.fas.fa-envelope
-            input.register-input.form-control(type='email', placeholder='Email')
+            input.register-input.form-control(type='email', placeholder='Email', name='email')
 
           .register-input-group.input-group
             .register-input-prepend.input-group-prepend
               span.register-input-text.input-group-text
                 i.fas.fa-key
-            input.register-input.form-control(type='password', placeholder='Password')
+            input.register-input.form-control(type='password', placeholder='Password', name='password')
 
           .register-input-group.input-group
             .register-input-prepend.input-group-prepend
               span.register-input-text.input-group-text
                 i.fas.fa-key
-            input.register-input.form-control(type='password', placeholder='Confirm Password')
+            input.register-input.form-control(type='password', placeholder='Confirm Password', name='confirmPassword')
 
           input.register-btn.btn(type='submit', value='Sign Up')
 

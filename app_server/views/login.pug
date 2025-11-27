@@ -13,18 +13,18 @@ html
         h3.login-title Login In
 
       .login-card-body.card-body
-        form.login-form
+        form.login-form(method='POST', action='/api/auth/login')
           .login-input-group.input-group
             .login-input-prepend.input-group-prepend
               span.login-input-text.input-group-text
                 i.fas.fa-user
-            input.login-input.form-control(type='text', placeholder='Username')
+            input.login-input.form-control(type='text', placeholder='Username', name='username')
 
           .login-input-group.input-group
             .login-input-prepend.input-group-prepend
               span.login-input-text.input-group-text
                 i.fas.fa-key
-            input.login-input.form-control(type='password', placeholder='Password')
+            input.login-input.form-control(type='password', placeholder='Password', name='password')
 
           input.login-btn.btn(type='submit', value='Login')
 
