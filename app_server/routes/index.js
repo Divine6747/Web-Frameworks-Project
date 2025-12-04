@@ -1,17 +1,39 @@
 const express = require('express');
 const router = express.Router();
-const ctrlAbout= require('../controllers/about');
+
+const ctrlAbout = require('../controllers/about');
 const ctrlAuth = require('../controllers/auth');
-const ctrlDest = require('../controllers/dessert');
+const ctrlDesserts = require('../controllers/dessert');
 
-/* Home page */
-router.get('/', ctrlDest.dessertList);
 
-/* Other pages */
-router.get('/about', ctrlAbout.aboutPage);
-router.get('/login', ctrlAuth.login);
-router.get('/register', ctrlAuth.register);
-router.get('/dessert-info', ctrlDest.dessertList);
+/* Homepage showing the list of desserts */
+router
+  .route('/')
+  .get(ctrlDesserts.dessertList);
 
+/* About page */
+router
+  .route('/about')
+  .get(ctrlAbout.aboutPage);
+
+/* Login page for VEIWs ONLY not the api*/
+router
+  .route('/login')
+  .get(ctrlAuth.login);
+
+/* Register page VEIWs ONLY not the api */
+router
+  .route('/register')
+  .get(ctrlAuth.register);
+
+/* Dessert list page */
+router
+  .route('/dessert')
+  .get(ctrlDesserts.dessertList);
+
+/* Dessert details page */
+router
+  .route('/dessert/:id')
+  .get(ctrlDesserts.dessertReadOne);
 
 module.exports = router;
