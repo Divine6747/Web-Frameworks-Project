@@ -1,0 +1,48 @@
+extends layout
+include _includes/sharedHTMLfunctions.pug
+
+block content
+  .row.banner
+    .col-12
+      h1= dessert.name
+        small &nbsp;Dessert Details
+
+  .row
+    .col-12.col-md-8
+      .card
+        .card-body
+          .row
+            .col-md-6
+              img.img-fluid.rounded(src=dessert.image, alt=dessert.name)
+            .col-md-6
+              .rating.mb-3
+                +outputRating(dessert.rating)
+                span.ms-2.text-muted= dessert.ratingText
+                span.badge.bg-primary.ms-2= dessert.reviewCount + ' reviews'
+              p.lead= dessert.description
+              
+              h5.mt-4 Ingredients
+              ul.list-unstyled
+                each ingredient in dessert.ingredients
+                  li.mb-2
+                    strong= ingredient.name + ':'
+                    span.ms-2= ingredient.description
+              
+              h5.mt-4 Preparation Steps
+              ol
+                each step in dessert.steps
+                  li.mb-2= step
+    
+    .col-12.col-md-4
+      .card.mt-4
+        .card-body
+          h5.card-title More Desserts
+          p.card-text Check out our other delicious recipes!
+          .d-grid.gap-2
+            a.btn.btn-primary(href='/dessert-old') View All Desserts
+            a.btn.btn-outline-secondary(href='/') Try Angular Version
+            a.btn.btn-outline-info(href='/about') About Us
+
+block scripts
+  script.
+    console.log('Dessert detail page loaded:', '#{dessert.name}');

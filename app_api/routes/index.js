@@ -5,31 +5,16 @@ const ctrlAbout = require('../controllers/about');
 const ctrlAuth = require('../controllers/auth');
 const ctrlDesserts = require('../controllers/dessert');
 
-// About routes for the static page and GET by id
-router
-  .route('/about')
-  .get(ctrlAbout.aboutList);
+// About API routes
+router.get('/about', ctrlAbout.aboutList);
+router.get('/about/:id', ctrlAbout.aboutReadOne);
 
-router
-  .route('/about/:id')
-  .get(ctrlAbout.aboutReadOne);
+// Auth API routes  
+router.post('/auth/register', ctrlAuth.userRegister);
+router.post('/auth/login', ctrlAuth.userLogin);
 
-// Auth routes
-router
-  .route('/auth/register')
-  .post(ctrlAuth.userRegister);
-
-router
-  .route('/auth/login')
-  .post(ctrlAuth.userLogin);
-
-// Dessert routes for the static page  and the GET by id
-router
-  .route('/dessert')
-  .get(ctrlDesserts.dessertList);
-
-router
-  .route('/dessert/:id')
-  .get(ctrlDesserts.dessertReadOne);
+// Dessert API routes
+router.get('/dessert', ctrlDesserts.dessertList);
+router.get('/dessert/:id', ctrlDesserts.dessertReadOne);
 
 module.exports = router;

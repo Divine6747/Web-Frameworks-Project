@@ -8,22 +8,14 @@ if (process.env.NODE_ENV === 'production') {
     apiOptions.server = 'https://web-frameworks-project-xcuw.onrender.com';
 }
 
-const renderDessertList = function (req, res, responseBody) {
-    res.render('dessert-info', {
-        title: 'Simple Dessert Recipes',
-        desserts: responseBody
-    });
-};
-
-const dessertList = function (req, res) {
-    const path = '/api/dessert';
-
+// CONTROLLER FUNCTION for dessert list
+const dessertList = function(req, res) {
     const requestOptions = {
-        url: apiOptions.server + path,
+        url: apiOptions.server + '/api/dessert',
         method: 'GET',
         json: {}
     };
-
+    
     request(requestOptions, (err, response, body) => {
         if (err) {
             console.error('API error:', err);
@@ -32,28 +24,20 @@ const dessertList = function (req, res) {
         if (response.statusCode !== 200) {
             return res.status(response.statusCode).send('Error from API');
         }
-
-        renderDessertList(req, res, body);
+        res.render('dessert-info', {
+            title: 'Dessert Delight',
+            desserts: body
+        });
     });
 };
 
-
-const renderDessertDetails = function (req, res, responseBody) {
-    res.render('dessert-details', {
-        title: responseBody.name,
-        dessert: responseBody
-    });
-};
-
-const dessertReadOne = function (req, res) {
-    const path = '/api/dessert/${req.params.id}';
-
+const dessertReadOne = function(req, res) {
     const requestOptions = {
-        url: apiOptions.server + path,
+        url: apiOptions.server + '/api/dessert/' + req.params.id,
         method: 'GET',
         json: {}
     };
-
+    
     request(requestOptions, (err, response, body) => {
         if (err) {
             console.error('API error:', err);
@@ -62,8 +46,10 @@ const dessertReadOne = function (req, res) {
         if (response.statusCode !== 200) {
             return res.status(response.statusCode).send('Error from API');
         }
-
-        renderDessertDetails(req, res, body);
+        res.render('dessert-details', {
+            title: body.name,
+            dessert: body
+        });
     });
 };
 

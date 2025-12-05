@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+        if pageHeader.strapline
+          small &nbsp;#{pageHeader.strapline}
+  
+  .row
+    .col-12.col-md-8
+      //- Angular component
+      app-dessert-list Loading desserts...
+      
+    .col-12.col-md-4
+      .card.mt-4
+        .card-body
+          h5.card-title About This Page
+          p.card-text Dessert Delight #{sidebar.context}
+          p.card-text #{sidebar.callToAction}
+          .d-grid.gap-2
+            a.btn.btn-primary(href='/dessert-old') View Original Pug Version
+            a.btn.btn-outline-secondary(href='/about') Learn More About Us
+
+block scripts
+  <!-- Angular CSS -->
+  link(rel='stylesheet', href='/build/styles-6DZJKKYU.css')
+  
+  <!-- Angular JavaScript -->
+  script(src='/build/main-SEH7ZBII.js')
+  
+  <!-- Fallback script -->
+  script.
+    setTimeout(function() {
+      var appElement = document.querySelector('app-dessert-list');
+      if (appElement && appElement.textContent === 'Loading desserts...') {
+        appElement.innerHTML = 
+          '<div class="alert alert-warning">' +
+            '<i class="fas fa-exclamation-triangle me-2"></i>' +
+            '<strong>Note:</strong> Angular failed to load. ' +
+            '<a href="/dessert-old" class="alert-link">View the Pug version instead</a>' +
+          '</div>';
+      }
+    }, 3000);

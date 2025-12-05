@@ -20,7 +20,7 @@ html
           ul.navbar-nav.mr-auto
             li.nav-item
               a.nav-link(href='/') Home
-                i.fa-solid.fa-cake-candles.icon-home <!--Bootstraps Icon-->
+                i.fa-solid.fa-cake-candles.icon-home
             li.nav-item
               a.nav-link(href='/login/') Login
                 i.fa-solid.fa-right-to-bracket.icon-login
@@ -29,13 +29,16 @@ html
                 i.fa-solid.fa-user-plus.icon-register
             li.nav-item
               a.nav-link(href='/about/') About
-                i.bi.bi-info-circle.icon-about <!--Bootstraps Icon-->
+                i.bi.bi-info-circle.icon-about
     .container
       block content
       footer
         .row
           .col-12
             small &copy; Divine Okhaus 2025
+    
     script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
     script(src='/javascripts/bootstrap.min.js')
+    
+    block scripts
