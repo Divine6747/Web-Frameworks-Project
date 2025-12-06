@@ -23,13 +23,19 @@ block content
             a.btn.btn-outline-secondary(href='/about') Learn More About Us
 
 block scripts
-  <!-- Angular CSS -->
+  //- Debug
+  script.
+    console.log('=== ANGULAR DEBUG ===');
+    console.log('Script will load:', '/build/main-PGOPN7Q4.js');
+    console.log('CSS will load:', '/build/styles-6DZJKKYU.css');
+  
+  //- Angular CSS
   link(rel='stylesheet', href='/build/styles-6DZJKKYU.css')
   
-  <!-- Angular JavaScript -->
-  script(src='/build/main-SEH7ZBII.js')
+  //- Angular JavaScript - UPDATED FILENAME!
+  script(src='/build/main-PGOPN7Q4.js')
   
-  <!-- Fallback script -->
+  //- Fallback script
   script.
     setTimeout(function() {
       var appElement = document.querySelector('app-dessert-list');

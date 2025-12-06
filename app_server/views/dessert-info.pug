@@ -2,36 +2,32 @@ extends layout
 include _includes/sharedHTMLfunctions.pug
 
 block content
-  .row.banner
-    .col-12
-      h1 Dessert Delight
-        small &nbsp;Sweet treats for everyone!
+  each dessert in desserts
+    .row
+      .col-12.col-md-8
+        .card
+          .card-block
+            h2= dessert.name
+            img.dessert-image(src=dessert.image, alt=dessert.name)
 
-  .row
-    .col-12.col-md-8
-      //- LIST VIEW ONLY - no if/else logic
-      each dessert in desserts
-        .card.mb-4
-          .card-body
-            .row
-              .col-md-4
-                img.img-fluid.rounded(src=dessert.image, alt=dessert.name)
-              .col-md-8
-                h4.card-title
-                  a(href='/dessert/' + dessert._id)= dessert.name
-                  small.text-muted.ms-2
-                    +outputRating(dessert.rating)
-                  span.badge.bg-primary.float-end= dessert.reviewCount + ' reviews'
-                p.card-text= dessert.description
-                .mt-3
-                  each ingredient in dessert.ingredients
-                    span.badge.bg-warning.text-dark.me-2= ingredient.name
+            .rating-section
+              h4 
+                strong Rating: #{dessert.ratingText} (#{dessert.reviewCount} reviews)
+              div 
+                +outputRating(dessert.rating)
 
-    .col-12.col-md-4
-      .card
-        .card-body
-          h5.card-title About Dessert Delight
-          p.card-text Discover the best dessert recipes with ratings and reviews from our community.
-          .d-grid.gap-2
-            a.btn.btn-primary(href='/about') Learn More
-            a.btn.btn-outline-secondary(href='/') Try Angular Version
+            h3 Ingredients
+            ul
+              each item in dessert.ingredients
+                li
+                  strong= item.name + ':'
+                  |  #{item.description}
+
+            h3 Preparation Steps
+            ol
+              each step in dessert.steps
+                li= step
+
+      .col-12.col-md-4
+        h2 Description
+        p.lead= dessert.description
